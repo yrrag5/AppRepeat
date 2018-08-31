@@ -52,13 +52,13 @@ namespace MathGame.Display
             Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += Options_BackRequested;
             if(Conditions.Score.Mode == 0)
             {
-                DiffSelectE.IsChecked = true;
-                DiffSelectH.IsChecked = false;
+                DiffSelectE.IsChecked = false;
+                DiffSelectH.IsChecked = true;
             }
             else
             {
-                DiffSelectE.IsChecked = false;
-                DiffSelectH.IsChecked = true;
+                DiffSelectE.IsChecked = true;
+                DiffSelectH.IsChecked = false;
             }
 
             int sliderVal = Conditions.Score.Speed;
