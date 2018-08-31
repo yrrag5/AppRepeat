@@ -29,6 +29,7 @@ namespace MathGame.Display
         private int staticNum1, staticNum2, staticResult, staticRandomResult, Score=0, State=1, HighScore=0, mode;
         private DispatcherTimer disTimer;
 
+        // Progress bar for time
         private void setupProgressBar()
         {
             disTimer = new DispatcherTimer();
@@ -111,6 +112,7 @@ namespace MathGame.Display
             }
         }
 
+        // Randomly generated questions while playing Easy Mode 
         private void Play()
         {
             Random rd = new Random();
@@ -190,6 +192,7 @@ namespace MathGame.Display
             setupProgressBar();
         }
 
+        // False button
         private void btnFalse_Click(object sender, RoutedEventArgs e)
         {
             if (mode == 0)

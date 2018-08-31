@@ -346,8 +346,8 @@
                 <TextBlock x:Name="Title" Text="Difficulty" Foreground="White" FontWeight="ExtraBold" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Left"/>
             </Grid>
             <Grid Grid.Row="1" Margin="5">
-                <CheckBox x:Name="DiffSelectE" Foreground="White" FontSize="15" FontWeight="ExtraBold" Content="Easy" HorizontalAlignment="Left" Margin="10, 10, 0, 0" VerticalAlignment="Top" Style="{StaticResource MyStyleCheckBox}" Checked="DiffSelectE_Checked"/>
-                <CheckBox x:Name="DiffSelectH" Foreground="White" FontSize="15" FontWeight="ExtraBold" Content="Hard" HorizontalAlignment="Right" Margin="10, 10, 0, 0" VerticalAlignment="Top" Style="{StaticResource MyStyleCheckBox}" Checked="DiffSelectH_Checked"/>
+                <CheckBox x:Name="DiffSelectH" Foreground="White" FontSize="15" FontWeight="ExtraBold" Content="Hard" HorizontalAlignment="Left" Margin="10, 10, 0, 0" VerticalAlignment="Top" Style="{StaticResource MyStyleCheckBox}" Checked="DiffSelectE_Checked"/>
+                <CheckBox x:Name="DiffSelectE" Foreground="White" FontSize="15" FontWeight="ExtraBold" Content="Easy" HorizontalAlignment="Right" Margin="10, 10, 0, 0" VerticalAlignment="Top" Style="{StaticResource MyStyleCheckBox}" Checked="DiffSelectH_Checked"/>
             </Grid>
 
             <Grid Grid.Row="2" Margin="5">

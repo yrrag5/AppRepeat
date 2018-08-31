@@ -30,6 +30,7 @@ namespace MathGame.Display
         private int Score = 0, state = 1, highScore = 0, num1, num2, result;
         private DispatcherTimer disTimer;
 
+        // Progress bar used for time 
         void setupProgressBar()
         {
             disTimer = new DispatcherTimer();
@@ -79,6 +80,7 @@ namespace MathGame.Display
             return val.Next(0, 3);
 
         }
+        // Generated questions for hard mode 
         private void Play()
         {
             int val1 = randomNum();
