@@ -132,19 +132,23 @@ namespace MathGame.MathGame_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
+            _typeNameTable = new string[7];
             _typeNameTable[0] = "MathGame.Display.EasyMode";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "MathGame.Display.HardMode";
-            _typeNameTable[4] = "MathGame.MainPage";
+            _typeNameTable[3] = "MathGame.Display.GameOver";
+            _typeNameTable[4] = "MathGame.Display.HardMode";
+            _typeNameTable[5] = "MathGame.MainPage";
+            _typeNameTable[6] = "MathGame.Display.Options";
 
-            _typeTable = new global::System.Type[5];
+            _typeTable = new global::System.Type[7];
             _typeTable[0] = typeof(global::MathGame.Display.EasyMode);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::MathGame.Display.HardMode);
-            _typeTable[4] = typeof(global::MathGame.MainPage);
+            _typeTable[3] = typeof(global::MathGame.Display.GameOver);
+            _typeTable[4] = typeof(global::MathGame.Display.HardMode);
+            _typeTable[5] = typeof(global::MathGame.MainPage);
+            _typeTable[6] = typeof(global::MathGame.Display.Options);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -180,8 +184,10 @@ namespace MathGame.MathGame_XamlTypeInfo
         }
 
         private object Activate_0_EasyMode() { return new global::MathGame.Display.EasyMode(); }
-        private object Activate_3_HardMode() { return new global::MathGame.Display.HardMode(); }
-        private object Activate_4_MainPage() { return new global::MathGame.MainPage(); }
+        private object Activate_3_GameOver() { return new global::MathGame.Display.GameOver(); }
+        private object Activate_4_HardMode() { return new global::MathGame.Display.HardMode(); }
+        private object Activate_5_MainPage() { return new global::MathGame.MainPage(); }
+        private object Activate_6_Options() { return new global::MathGame.Display.Options(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -208,16 +214,30 @@ namespace MathGame.MathGame_XamlTypeInfo
                 xamlType = new global::MathGame.MathGame_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  MathGame.Display.HardMode
+            case 3:   //  MathGame.Display.GameOver
                 userType = new global::MathGame.MathGame_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_HardMode;
+                userType.Activator = Activate_3_GameOver;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  MathGame.MainPage
+            case 4:   //  MathGame.Display.HardMode
                 userType = new global::MathGame.MathGame_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_MainPage;
+                userType.Activator = Activate_4_HardMode;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  MathGame.MainPage
+                userType = new global::MathGame.MathGame_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  MathGame.Display.Options
+                userType = new global::MathGame.MathGame_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_Options;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

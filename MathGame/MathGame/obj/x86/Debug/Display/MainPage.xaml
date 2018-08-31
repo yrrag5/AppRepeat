@@ -15,20 +15,20 @@
                 <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Margin="0 20 0 0">
-                <TextBlock x:Name="Title" Text="Test Your Knowledge" Foreground="White" FontWeight="ExtraBold"
+                <TextBlock x:ConnectionId='4' x:Name="Title" Text="Test Your Knowledge" Foreground="White" FontWeight="ExtraBold"
                       TextWrapping="Wrap" FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" />
             </Grid>
             <Grid Grid.Row="1">
-                <TextBlock x:Name="txtHighScore" Text="High Score : 0" Foreground="White" FontWeight="ExtraBold" TextWrapping="Wrap"
+                <TextBlock x:ConnectionId='3' x:Name="txtHighScore" Text="High Score : 0" Foreground="White" FontWeight="ExtraBold" TextWrapping="Wrap"
                        FontSize="27" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center">
                 </TextBlock> 
             </Grid>
             <Grid Grid.Row="2">
                 <StackPanel Orientation="Vertical">
-                    <Button x:Name="start" BorderBrush="ForestGreen" BorderThickness="4" Background="Yellow" Content="Start"
-                            HorizontalAlignment="Center" VerticalAlignment="Center" Padding="40 10 40 10" Foreground="White" FontWeight="ExtraBold" FontSize="30" Click="start_Click"/>
-                    <Button x:Name="option" BorderBrush="ForestGreen" BorderThickness="4" Background="Red" Content="Options"
-                            HorizontalAlignment="Center" VerticalAlignment="Center" Padding="20 10 20 10" Foreground="White" FontWeight="ExtraBold" FontSize="30" Click="option_Click"/>
+                    <Button x:ConnectionId='1' x:Name="start" BorderBrush="ForestGreen" BorderThickness="4" Background="Yellow" Content="Start"
+                            HorizontalAlignment="Center" VerticalAlignment="Center" Padding="40 10 40 10" Foreground="White" FontWeight="ExtraBold" FontSize="30"                    />
+                    <Button x:ConnectionId='2' x:Name="option" BorderBrush="ForestGreen" BorderThickness="4" Background="Red" Content="Options"
+                            HorizontalAlignment="Center" VerticalAlignment="Center" Padding="20 10 20 10" Foreground="White" FontWeight="ExtraBold" FontSize="30"                     />
                 </StackPanel>
             </Grid>
             
@@ -37,3 +37,4 @@
 
         </Grid>
 </Page>
+

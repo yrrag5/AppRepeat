@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Author Garry Cummins
+// Mobile App Repeat 
+using MathGame.Display;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,16 +33,17 @@ namespace MathGame
 
         private void start_Click(object sender, RoutedEventArgs e)
         {
-            // Easy mode
+            // Defaults game to hard mode if difficulty isn selected
+            // Switch HardMode with EasyMode to view both pages in not viewing through mobile emulator
             if(Conditions.Score.Mode == 0)
             {
-                Frame.Navigate(typeof(Display.EasyMode));
+                Frame.Navigate(typeof(Display.HardMode));
             }
 
-            // Hard Mode
+            // Easy Mode
             else
             {
-                Frame.Navigate(typeof(Display.HardMode));
+                Frame.Navigate(typeof(Display.EasyMode));
             }
         }
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -76,7 +80,7 @@ namespace MathGame
 
         private void option_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(Options));
         }
     }
 }

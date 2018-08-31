@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Author Garry Cummins
+// Mobile App Repeat 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -70,7 +72,7 @@ namespace MathGame
                 if (rootFrame.Content == null)
                 {
                     // Load settings
-                    string highScore = Conditions.Score.LoadSett("High Score");
+                    string highScore = Conditions.Score.LoadSett("HighScore");
                     string mode = Conditions.Score.LoadSett("Mode");
                     string speed = Conditions.Score.LoadSett("Speed");
 

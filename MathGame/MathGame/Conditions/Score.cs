@@ -1,4 +1,5 @@
-﻿// Garry Cummins
+﻿// Author Garry Cummins
+// Mobile App Repeat 
 using System;
 using System.Collections.Generic;
 using System.Linq;

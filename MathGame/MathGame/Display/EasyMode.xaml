@@ -8,16 +8,36 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-        <Grid Background="Black">
+        <Grid Background="PowderBlue">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="8 4 8 4">
+                <TextBlock x:Name="score" Text="Score:0" FontSize="27" Foreground="White" FontWeight="ExtraBold" HorizontalAlignment="Left"></TextBlock>
+                <TextBlock x:Name="highscore" Text="HighScore:0" FontSize="27" Foreground="White" FontWeight="ExtraBold" HorizontalAlignment="Right"></TextBlock>
+
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="txtState" Text="1" FontSize="30" Foreground="White" FontWeight="ExtraBold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <ProgressBar Grid.Row="3" x:Name="progressBar" IsIndeterminate="False" Maximum="9999" Minimum="0" Height="10" Margin="8 0 8 0" Value="9999" SmallChange="1"></ProgressBar>
+            </Grid>
+            <Grid Grid.Row="2">
+                <TextBlock x:Name="txtMath" Text="2 + 7 = 9" FontSize="30" Foreground="White" FontWeight="ExtraBold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Row="3" VerticalAlignment="Top">
+                <Button x:Name="btnTrue" BorderBrush="Beige" BorderThickness="5" Margin="5" Background="Brown" Content="True" HorizontalAlignment="Left" VerticalAlignment="Bottom" Padding="20 5 20 5" Foreground="White" FontWeight="ExtraBold" FontSize="27" Click="btnTrue_Click"/>
+                <Button x:Name="btnFalse" BorderBrush="Beige" BorderThickness="5" Margin="5" Background="Brown" Content="False" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="20 5 20 5" Foreground="White" FontWeight="ExtraBold" FontSize="27" Click="btnFalse_Click"/>
+
+            </Grid>
             
-            <Grid Grid.Row="0" Margin=""
         </Grid>
     </Grid>
+
 </Page>
